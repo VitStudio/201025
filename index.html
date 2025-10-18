@@ -24,6 +24,8 @@
         .container svg {
             width: 50%;
             height: 50%;
+            max-width: 600px;
+            max-height: 600px;
         }
     </style>
 
@@ -69,27 +71,29 @@
             width: 300px;
             height: 200px;
             background-color: #f08080;
+            max-width: 90vw;
+            max-height: calc(90vw * 0.667);
         }
         
         .envelope:before {
             background-color: #f08080;
             content: "";
             position: absolute;
-            width: 212px;
-            height: 212px;
+            width: 70.67%;
+            height: 106%;
             transform: rotate(45deg);
-            top: -105px;
-            left: 44px;
+            top: -52.5%;
+            left: 14.67%;
             border-radius: 30px 0 0 0;
         }
         
         .card {
             position: absolute;
             background-color: #eae2b7;
-            width: 270px;
-            height: 170px;
-            top: 5px;
-            left: 15px;
+            width: 90%;
+            height: 85%;
+            top: 2.5%;
+            left: 5%;
             box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
         }
         
@@ -98,20 +102,20 @@
             position: absolute;
             border: 3px solid #003049;
             border-style: dotted;
-            width: 240px;
-            heighT: 140px;
-            left: 12px;
-            top: 12px;
+            width: 88.89%;
+            height: 82.35%;
+            left: 4.44%;
+            top: 7.06%;
         }
         
         .text {
             position: absolute;
             font-family: 'Brush Script MT', cursive;
-            font-size: 28px;
+            font-size: clamp(20px, 5vw, 28px);
             text-align: center;
-            line-height: 25px;
-            top: 19px;
-            left: 85px;
+            line-height: 1.1;
+            top: 11.18%;
+            left: 31.48%;
             color: #003049;
         }
         
@@ -121,8 +125,8 @@
             height: 30px;
             margin: 0 10px;
             position: relative;
-            top: 110px;
-            left: 105px;
+            top: 64.71%;
+            left: 38.89%;
             transform: rotate(-45deg);
             width: 30px;
         }
@@ -241,11 +245,14 @@
         
         .front {
             position: absolute;
-            border-right: 180px solid #f4978e;
-            border-top: 95px solid transparent;
-            border-bottom: 100px solid transparent;
-            left: 120px;
-            top: 5px;
+            border-right: 60vw solid #f4978e;
+            border-right-width: min(180px, 60vw);
+            border-top: 31.67vw solid transparent;
+            border-top-width: min(95px, 31.67vw);
+            border-bottom: 33.33vw solid transparent;
+            border-bottom-width: min(100px, 33.33vw);
+            left: 40%;
+            top: 2.5%;
             width: 0;
             height: 0;
             z-index: 10;
@@ -254,22 +261,24 @@
         .front:before {
             position: absolute;
             content: "";
-            border-left: 300px solid #f8ad9d;
-            border-top: 195px solid transparent;
-            left: -120px;
-            top: -95px;
+            border-left: 100vw solid #f8ad9d;
+            border-left-width: min(300px, 100vw);
+            border-top: 65vw solid transparent;
+            border-top-width: min(195px, 65vw);
+            left: -40%;
+            top: -100%;
             width: 0;
             height: 0;
         }
         
         .shadow {
             position: absolute;
-            width: 330px;
+            width: 110%;
             height: 25px;
             border-radius: 50%;
             background-color: rgba(0, 0, 0, 0.3);
-            top: 265px;
-            left: -15px;
+            top: 132.5%;
+            left: -5%;
             animation: scale 3s linear infinite;
             z-index: -1;
         }
@@ -378,12 +387,13 @@
             left: 0;
             right: 0;
             z-index: 1;
+            max-width: 800px;
         }
         
         text {
             fill: #e6668a;
             font-family: consolas;
-            font-size: 9px;
+            font-size: clamp(6px, 1.2vw, 9px);
         }
         
         p {
@@ -505,8 +515,10 @@
         
         .boxLetter .formLetter {
             position: relative;
-            width: 600px;
-            height: 350px;
+            width: 90%;
+            max-width: 600px;
+            height: auto;
+            min-height: 350px;
             background-color: #FFEBEB;
             border-radius: 20px;
             z-index: 100;
@@ -525,7 +537,8 @@
         
         .boxLetter .before {
             position: absolute;
-            width: 600px;
+            width: 90%;
+            max-width: 600px;
             height: 350px;
             background: #fff;
             transform: rotate(-15deg);
@@ -589,7 +602,7 @@
         
         .giftbox .img {
             position: absolute;
-            width: 180px;
+            width: clamp(120px, 30vw, 180px);
             bottom: 10px;
             left: 15px;
             z-index: 100;
@@ -614,9 +627,9 @@
         }
         
         .textLetter .contentLetter {
-            font-size: 19px;
+            font-size: clamp(14px, 3.5vw, 19px);
             text-align: center;
-            padding: 0px 30px;
+            padding: 0px 15px;
             margin-top: 10px;
             font-family: 'Dancing Script', cursive;
             position: initial;
@@ -637,7 +650,7 @@
         
         .heartAnimation {
             position: absolute;
-            width: 200px;
+            width: clamp(120px, 30vw, 200px);
             bottom: 0;
         }
         
@@ -648,7 +661,7 @@
         .mewmew1,
         .mewmew2 {
             position: absolute;
-            width: 90px;
+            width: clamp(60px, 15vw, 90px);
         }
         
         .mewmew1 {
@@ -665,6 +678,124 @@
         .mewmew2 img {
             width: 100%;
         }
+        
+        /* Responsive Media Queries */
+        @media screen and (max-width: 768px) {
+            .container svg {
+                width: 70%;
+                height: 70%;
+            }
+            
+            .envelope {
+                width: 250px;
+                height: 167px;
+            }
+            
+            .giftbox {
+                width: 35%;
+            }
+            
+            .textLetter {
+                width: 65%;
+            }
+            
+            .formLetter .wrapperLetter {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .giftbox .img {
+                position: static;
+                margin-bottom: 10px;
+            }
+        }
+        
+        @media screen and (max-width: 576px) {
+            .container svg {
+                width: 85%;
+                height: 85%;
+            }
+            
+            #text-click {
+                font-size: clamp(30px, 8vw, 50px) !important;
+            }
+            
+            .envelope {
+                width: 200px;
+                height: 133px;
+            }
+            
+            .valentines {
+                top: 30px;
+            }
+            
+            .boxLetter .formLetter {
+                width: 95%;
+                padding: 15px 10px;
+                min-height: auto;
+            }
+            
+            .formLetter .wrapperLetter {
+                flex-direction: column;
+                padding: 10px;
+            }
+            
+            .giftbox {
+                width: 100%;
+                height: auto;
+                position: static;
+                margin-bottom: 15px;
+            }
+            
+            .giftbox .img {
+                position: static;
+                width: 120px;
+                margin: 0 auto;
+                display: block;
+            }
+            
+            .textLetter {
+                width: 100%;
+            }
+            
+            .textLetter .contentLetter {
+                padding: 0px 10px;
+            }
+            
+            .mewmew1,
+            .mewmew2 {
+                width: 60px;
+            }
+            
+            .heartAnimation {
+                width: 120px;
+            }
+            
+            .boxLetter .before {
+                height: auto;
+                min-height: 300px;
+            }
+        }
+        
+        @media screen and (max-width: 400px) {
+            .envelope {
+                width: 180px;
+                height: 120px;
+            }
+            
+            .valentines {
+                top: 20px;
+            }
+            
+            .textLetter h2 {
+                font-size: 20px;
+            }
+            
+            .textLetter .contentLetter {
+                font-size: 14px;
+            }
+        }
+    
     </style>
 </head>
 
@@ -939,7 +1070,7 @@
         </svg>
         <p id="text-click" style=" display: none;   font-family: fantasy;
         color: indianred;
-        font-size: 50px;
+        font-size: clamp(30px, 8vw, 50px);
         top: 80%;">Nhấn vào đây !</p>
     </div>
 
